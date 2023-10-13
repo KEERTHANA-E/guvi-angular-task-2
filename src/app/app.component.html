@@ -1,0 +1,12 @@
+
+<div class="container text-center mt-2">
+    <div class="d-flex align-items-center justify-content-around">
+        <div class=""><i class="fa-solid fa-chevron-left" (click)="moveLeft()" style="font-size: 40px"></i></div>
+        <img [src]="images[curIdx]" alt="">
+        <div><i class="fa-solid fa-chevron-right" (click)="moveRight()" style="font-size: 40px"></i></div>
+    </div>
+    <div *ngFor="let x of indexes;" style="display: inline; padding: 20px;" class="text-center">
+        <span *ngIf="x==curIdx" (click)="curIdx=x"><i class="fa-solid fa-circle"></i></span>
+        <span *ngIf="x!=curIdx" (click)="curIdx=x"><i class="fa-regular fa-circle"></i></span>
+    </div>
+</div>
